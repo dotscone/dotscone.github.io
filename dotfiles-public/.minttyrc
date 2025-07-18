@@ -1,0 +1,15 @@
+BoldAsFont=no
+Font=Migu 1M
+FontHeight=12
+Locale=ja_JP
+Charset=UTF-8
+ThemeFile=flat-ui
+Transparency=medium
+CursorType=underscore
+Rows=48
+BellType=0
+BellFlash=no
+BellPopup=yes
+Columns=120
+MiddleClickAction=void
+RightClickAction=paste
