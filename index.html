@@ -1,1 +1,65 @@
-^____^
+<!DOCTYPE html>
+<html lang="ryu-JP">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Asimovian&display=swap" rel="stylesheet" />
+    <title>^____^</title>
+    <style>
+      :root {
+        line-height: 100%;
+        font-family: "Asimovian", sans-serif;
+        font-size: 2vi;
+        font-weight: 400;
+        font-style: normal;
+        user-select: none;
+      }
+      :root[data-theme="light"] {
+        --background-color: #ffffff;
+        --text-color: #333333;
+      }
+      :root[data-theme="dark"] {
+        --background-color: #333333;
+        --text-color: #ffffff;
+      }
+
+      body {
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+      }
+
+      .center {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .main {
+        --default-color: #eeeeee88;
+        --focus-color: #e7e7c0ff;
+
+        aspect-ratio: 1;
+        padding: 0.8rem;
+        border-radius: 0.5rem;
+        border: 3px dotted var(--default-color);
+        color: var(--default-color);
+
+        &:hover {
+          border-color: var(--focus-color);
+          color: var(--focus-color);
+        }
+      }
+    </style>
+    <script defer>
+      const menuDame = (event) => event.preventDefault();
+      document.addEventListener("contextmenu", menuDame);
+    </script>
+  </head>
+  <body class="center">
+    <div class="center main">^____^</div>
+  </body>
+</html>
