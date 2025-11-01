@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ryu-JP">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href="/css/core.css" rel="stylesheet" />
+    <title>^____^</title>
+    <style>
+      body {
+        display: grid;
+      }
+
+      .dot {
+        transition: all 0.4s;
+        box-sizing: border-box;
+        aspect-ratio: 1;
+
+        border: 2px solid var(--default-color);
+        opacity: 0.5;
+
+        &:hover {
+          border-color: var(--attention-color);
+          opacity: 1;
+        }
+      }
+
+      .layer-1,
+      .layer-2 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        grid-area: 1 / 1;
+        opacity: 0.95;
+      }
+
+      .layer-1 {
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+        .dot {
+          width: 1vi;
+          height: 1vi;
+        }
+      }
+
+      .layer-2 {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        .dot {
+          width: 3vi;
+          height: 3vi;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const dot = () => {
+        const div = document.createElement("div");
+        div.className = "dot";
+        return div;
+      };
+
+      const loadScreen = () => {
+        const f1 = document.createDocumentFragment();
+        for (let i = 0; i < 100 * 100; i += 1) f1.appendChild(dot());
+
+        const f2 = document.createDocumentFragment();
+        for (let i = 0; i < 50 * 50; i += 1) f2.appendChild(dot());
+
+        const layer1 = document.createElement("div");
+        layer1.className = "layer-1";
+        layer1.appendChild(f1);
+        const layer2 = document.createElement("div");
+        layer2.className = "layer-2";
+        layer2.appendChild(f2);
+
+        document.body.append(layer1);
+        document.body.append(layer2);
+      };
+
+      document.addEventListener("DOMContentLoaded", loadScreen);
+    </script>
+  </body>
+</html>
