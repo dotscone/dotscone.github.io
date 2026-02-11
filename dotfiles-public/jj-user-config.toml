@@ -1,0 +1,4 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[working-copy]
+eol-conversion = "input-output"
