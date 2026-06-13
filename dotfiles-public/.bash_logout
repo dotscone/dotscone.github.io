@@ -1,8 +1,13 @@
 #!/bin/bash -f
 
-echo [.bash_logout]
-pwd
+echo "bye!  "`pwd`
 pwd > ~/.bash_lastdir
 
-sleep 1
+sleep 0.2
+echo 😱😱😱
+sleep 0.2
+echo 😱😱
+sleep 0.2
+echo 😱
+sleep 0.2
 
