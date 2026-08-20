@@ -1,0 +1,10 @@
+[alias]
+	ns = show --name-status
+	sw = switch
+[diff]
+	wsErrorHighlight = all
+[core]
+	autocrlf = true
+	safecrlf = false
+[log]
+	follow = true
